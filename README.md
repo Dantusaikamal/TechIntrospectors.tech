@@ -13,7 +13,7 @@
     <img src="images/logo-black.png" alt="Logo" width="200" height="200">
   </a>
 
-  <h3 align="center">Tech Blog</h3>
+  <h3 align="center">Tech Introspectors Blog</h3>
 
   <p align="center">
     By Sai Kamal
