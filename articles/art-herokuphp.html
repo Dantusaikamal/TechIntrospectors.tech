@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Site Metas -->
+    <title>Deploy PHP application in Heroku within 5 minutes</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- FontAwes.ome Icons core CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../style.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href=".../css/responsive.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="../css/colors.css" rel="stylesheet">
+
+    <!-- Version Tech CSS for this template -->
+    <link href="../css/version/tech.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <header class="tech-header header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../tech-index.html"><img src="../images/version/logowhite.png" alt=""></a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../tech-index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                                <ul class="dropdown-menu megamenu" aria-labelledby="dropdown01">
+                                    <li>
+                                        <div class="container">
+                                            <div class="mega-menu-content clearfix">
+                                                <div class="tab">
+                                                    <button class="tablinks active" onclick="openCategory(event, 'cat01')">Science</button>
+                                                    <button class="tablinks" onclick="openCategory(event, 'cat02')">Technology</button>
+                                                    <button class="tablinks" onclick="openCategory(event, 'cat03')">Smartphones</button>
+                                                    <button class="tablinks" onclick="openCategory(event, 'cat04')">Gadgets</button>
+                                                </div>
+
+                                                <div class="tab-details clearfix">
+                                                    <div id="cat01" class="tabcontent active">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_01.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Science</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Top 10+ care advice for your toenails</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_02.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Science</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">The secret of your beauty is handmade soap</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_03.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Science</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Benefits of face mask made from mud</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_04.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Science</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Relax with the unique warmth of candle flavor</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+                                                        </div><!-- end row -->
+                                                    </div>
+                                                    <div id="cat02" class="tabcontent">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_05.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Technology</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">2017 summer stamp will have design models here</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_06.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Technology</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Which color is the most suitable color for you?</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_07.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Technology</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Subscribe to these sites to keep an eye on the fashion</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_08.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Technology</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">The most trends of this year with color combination</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+                                                        </div><!-- end row -->
+                                                    </div>
+                                                    <div id="cat03" class="tabcontent">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_09.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Smartphones</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">I visited the architects of Istanbul for you</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_10.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Smartphones</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Prepared handmade dish dish in the Netherlands</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_11.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Smartphones</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">I recommend you visit the fairy chimneys</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_12.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Smartphones</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">One of the most beautiful ports in the world</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+                                                        </div><!-- end row -->
+                                                    </div>
+                                                    <div id="cat04" class="tabcontent">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_13.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Gadgets</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">A collection of the most beautiful shop designs</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_14.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Gadgets</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">America's and Canada's most beautiful wine houses</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_15.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Gadgets</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">The most professional ways to color your walls</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_16.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Gadgets</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Stylish cabinet designs and furnitures</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+                                                        </div><!-- end row -->
+                                                    </div>
+                                                    <div id="cat05" class="tabcontent">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_17.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Worldwide</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Grilled vegetable with fish prepared with fish</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                                <div class="blog-box">
+                                                                    <div class="post-media">
+                                                                        <a href="../tech-single.html" title="">
+                                                                            <img src="../upload/tech_menu_20.jpg" alt="" class="img-fluid">
+                                                                            <div class="hovereffect">
+                                                                            </div><!-- end hover -->
+                                                                            <span class="menucat">Worldwide</span>
+                                                                        </a>
+                                                                    </div><!-- end media -->
+                                                                    <div class="blog-meta">
+                                                                        <h4><a href="../tech-single.html" title="">Tasty pasta sauces and recipes</a></h4>
+                                                                    </div><!-- end meta -->
+                                                                </div><!-- end blog-box -->
+                                                            </div>
+                                                        </div><!-- end row -->
+                                                    </div>
+                                                </div><!-- end tab-details -->
+                                            </div><!-- end mega-menu-content -->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+               
+                            <li class="nav-item">
+                                <a class="nav-link" href="../project-ideas.html">Project Ideas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../reviews.html">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../tech-contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mr-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-twitter-square"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-envelope-o"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-github-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div><!-- end container-fluid -->
+        </header><!-- end market-header -->
+
+
+        <!--Article section-->
+
+
+        <section class="section single-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-wrapper">
+                            <div class="blog-title-area text-center">
+                                <ol class="breadcrumb hidden-xs-down">
+                                    <li class="breadcrumb-item"><a href="../tech-index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../tech-index.html">Blog</a></li>
+                                    <li class="breadcrumb-item active">Deploy PHP apps with Database in Heroku within 15 minutes</li>
+                                </ol>
+
+                                <span class="color-orange"><a href="../category-science.html" title="">Project ideas</a></span>
+
+                                <h3>Deploy PHP apps with Database in Heroku within 15 minutes</h3>
+
+                                <div class="blog-meta big-meta">
+                                    <small><a href="../tech-single.html" title="">17th May, 2021</a></small>
+                                    <small><a href="../tech-author.html" title="">by Sai Kamal</a></small>
+                                    <small><a href="../#" title=""><i class="fa fa-eye"></i> 128</a></small>
+                                </div><!-- end meta -->
+
+                                <div class="post-sharing">
+                                    <ul class="list-inline">
+                                        <li><a href="../#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
+                                        <li><a href="../#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
+                                        <li><a href="../#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div><!-- end post-sharing -->
+                            </div><!-- end title -->
+
+                            <div class="blog-content">  
+                                <div class="pp">
+                                    <p>
+                                        Have you created a Web application in PHP and looking to deploy in Heroku? Then you have come to the right place! Let us look how you can deploy PHP applications in Heroku within 15 minutes.
+                                    </p>
+                                        
+                                        <div class="single-post-media">
+                                            <img src="../upload/heroku.png" alt="" class="img-fluid">
+                                        </div><!-- end media -->                                    
+                                      
+                                        <br>  <h3><strong>Why choose Heroku?</strong></h3>
+                                </div>                                
+                                <div class="pp">
+   
+
+                                    <br>  <p>Heroku is a cloud service platform whose popularity has grown in recent years. Heroku is so easy to use that it’s a top choice for many development projects.
+
+                                        With a special focus on supporting customer-focused apps, it enables simple application development and deployment. Since the Heroku platform manages hardware and servers, businesses that use Heroku are able to focus on perfecting their apps. And not the infrastructure that supports them.
+                                        
+                                        More time goes towards ensuring that users receive the highest quality experiences as possible.
+
+
+                                        <br>    Projects created in Heroku are bound to repositories in GitHub. Heroku’s integration with GitHub provides automated builds and deploys of the latest version of code.
+
+                                        GitHub is a trusted repository of source code, so Heroku’s integration with GitHub and other tools helps developers optimize their efforts and save stakeholders time and money over the course of development projects.
+
+                                    </div>
+
+                                    <div class="pp">
+
+                                        <br>    <b> Deploying PHP Applications in Heroku: </b> <br>
+
+                                       Even though PHP is not as trending as other languages like JavaScript and Python, it still remains as a go-to language for hobby projects. What's keeping PHP alive is that it powers 80% of the websites on the internet. It is an absolute giant. Not to forget Facebook, Yahoo, Wikipedia, Wordpress and more are built using PHP.  
+
+                                        <br> I don't think we need any more introduction for PHP since you have already built a PHP application if you're reading this article. 
+
+                                       <br> Let us deploy your PHP application to Heroku
+                                  
+                                       <br><br> <b>Prerequisites: </b>
+                                        <br>• A Heroku account.
+                                        <br>• A Github account.
+                                        <br>• XAMPP 
+                                        <br>• MySQL Workbench
+                                        <br>• A Credit card (No money would be charged)
+                                        <br>• Nothing else!
+                                     </p>
+                                    </div><!-- end pp -->
+                                </div> 
+
+                            <h5><strong>1. Create a new app instance in Heroku</strong></h5> <br>
+                                                           
+                                <div class="single-post-media">
+                                    <img src="../upload/herokudashboard.PNG" alt="" class="img-fluid">
+                                </div><!-- end media -->                            
+
+                                <p> If you haven't created a Heroku account already, go to <a href = "https://signup.heroku.com/"> Heroku’s sign up page </a> and create an account. <br>
+
+                                <br> Once you successfully create a Heroku account, go to <a href = "https://dashboard.heroku.com/apps"> Heroku dashboard </a> and create an app.
+                              </p>
+                              
+                              <div class="single-post-media">
+                                <img src="../upload/appname.PNG" alt="" class="img-fluid">
+                              </div><!-- end media -->                            
+                              <p>
+                                <br><br>  Give an app name of your choice. Don't forget to use lowercase letters only and no special characters other than dashes. ('-')
+ 
+                                <br>Select either US or Europe as the region. No issues with either of the locations.
+                                
+                                <br><br>Now click on <b>'create app'</b>.
+
+                                <br><br> One more thing: Select 'PHP' build pack. It is important for Heroku to understand that you are using PHP for you web application. This is where Buildpacks come into action!
+
+                                <br> Go to <b>'settings'</b> in Dashboard. Scroll down, you will notice Buildpacks.
+                              </p>
+                    
+                              <div class="single-post-media">
+                                <img src="../upload/buildpack.PNG" alt="" class="img-fluid">
+                              </div><!-- end media -->                            
+
+                            <p>
+                                Select PHP buildpack since we are using PHP to develop our current app.
+
+                                <br>You have successfully created an app instance in Heroku. 
+
+                                <br><br>Now let us move to Github and look at how you can deploy your code.                                
+                            </p>
+                           </div>
+                                  <div class="pp">
+
+                                  <h5><strong>2. Create a GitHub repository </strong></h5> <br>
+                                    <p>
+                                   </p>
+                                    <img src="../upload/1. github.PNG" alt="" class="img-fluid">
+
+                                  <br><p>
+                                    
+                                     If you already have a Github account, go ahead and create a github repository and deploy your code.
+                                     
+                                     <br> If you don't have a Github account, <a href = "https://github.com/join"> Create a GitHub account now! </a> 
+                                     <br><br> Once you have created a new account, click on '+' in the top right menu. 
+                                     <br> Select <b>'New repository'</b>
+                                     <br>Give a name to your app and finish creating the repository 
+                                     
+                                     <br><br> Once you finish creating a repository, Push your code to your repository. 
+                                     </p> 
+
+                                     <img src="../upload/3. github.PNG" alt="" class="img-fluid">
+
+                                    <br> <p>If you are done with everything, you repository should look like mine. You have just pushed code to Github. It's time to deploy your code to Heroku
+
+                                        <br><br> Heroku easily connects with Github repositories and makes deploying code a piece of cake 🍰
+
+                                        <br>  Go back to Heroku Dashboard. Click on <b>'deploy'</b> in the menu. 
+
+                                        <br> Now select 'GitHub' and connect with your Github account. Select your GitHub repository in which your pushed your code.
+                                     
+                                    </p>
+                                   
+                                     <img src="../upload/4. deploy.PNG" alt="" class="img-fluid">
+
+                                     <img src="../upload/5. deploy part 2.PNG" alt="" class="img-fluid">
+
+                                    <br>
+                                     <p>If you have followed the above steps, Your deployment page should look like this. Congratulations! You've successfully deployed your code in Heroku. Three more steps and you are done!</p>
+                              </div>
+                              
+                              
+                              <div class="pp">
+
+                                  <h5><strong>3. Configure Heroku build pack </strong></h5> <br>
+
+                                    <p> Now that you have finished deploying code to Heroku, Let us configure the build pack in Heroku.
+
+                                <br><b>Note:</b> This should be done automatically most of the time by Heroku itself. But just to make sure, we'll check if the build pack is rightly configured.
+                                <br>Go to settings page in your Dashboard. 
+                                <br>Scroll down, you will find add buildpack option. 
+                                <br>Click on <b>'add buildpack'</b> and select PHP. Now click on <b>'Save Changes'</b>.
+
+                                    </p>
+                                <br>
+                                  <img src="../upload/buildpack.PNG" alt="" class="img-fluid">
+
+                                  
+                                <p><br> If you don't have a database in your PHP website your work is pretty much done. Click on <b>'Open App'</b> in Overview page in Dashboard to view your application!
+                                <br><br> But most of our PHP apps are dynamic applications with a database. So if you have one, follow the following steps.
+                                </p> 
+                            </div>
+                            
+                            <br>
+<br>
+                               <div class="pp">
+
+                                  <h5><strong>4. Configure MySQL Database  </strong></h5> <br>
+
+                                    <p>
+                                      If you have a MySQL database in your local, create a MySQL add-on in Heroku. To do this, go to Resources tab in Dashboard.
+                                      <br><br> Click on search bar and search for 'JawsDB MySQL'   
+                                    </p>
+                                    
+                                    <img src="../upload/jaws.PNG" alt="" class="img-fluid">
+
+                                    <br>
+
+                                    <img src="../upload/jaws2.PNG" alt="" class="img-fluid">
+
+                                    <p>
+                                    
+                                    <br> JawsDB is not a free instance for now. So you need to verify your Heroku account. 
+
+                                    <br> To verify your Heroku account:
+
+                                    <br><br>1. Go to your Account <b>'Settings'</b> in the Heroku Dashboard.
+
+                                   <br>2. Click the <b>'Billing'</b> tab.
+
+                                   <br>3. Click <b>'Add Credit Card'</b>
+
+                                   <br> Note that you won't be charged any money since JawsDB is a free instance. But you would need a verified account in order to use add-ons.
+
+                                   <br><br> Once you are done with verification, go to resouces and click on <b>'JawsDB MySQL'</b> add-on you just added.
+
+                                     <br>You will be taken to this page where your configuration details are visible.
+                                    
+                                   </p>
+
+                                   <img src="../upload/jaws3.PNG" alt="" class="img-fluid">
+
+                                   <p>
+                                   
+                                     <br>Now go back to GitHub and update your config.php file. Copy the Host, Username, Password, Port and Database details from JawsDB to your config.php.
+                                    
+                                     <br>Once you are done, your config.php file will look like this:
+
+                                     </p>
+
+                                     <img src="../upload/config.PNG" alt="" class="img-fluid">
+
+                                     <p>
+                                     If you have any doubt what you just did, don't get lost. You just created a new MySQL database and connected it your app. But here's the problem: The database you just created is empty! Let's migrate your Local MySQL database to JawsDB using MySQL Workbench and Phpmyadmin
+                                     <br>
+                                    </p>
+                              </div>
+                            
+                              <div class="pp">
+
+                                <h5><strong>5. Exporting Database using Phpmyadmin and MySQL Workbench  </strong></h5> <br>
+
+                                  <p>
+                                    We're almost there. This is the last step you need to follow to get your PHP app up and running with your database.
+                                    <br><br> Go to XAMPP control panel and start 'Apache' and 'MySQL' modules.    
+                                  </p>
+                                  
+                                  <img src="../upload/xampp.PNG" alt="" class="img-fluid">
+
+                                  <br>
+                                    <p>Now open a browser and go to localhost/phpmyadmin web page. You will find your local database here. Click on your database and select 'Export' tab. In export tab, click on 'Go'.</p>
+                                  <br><img src="../upload/dbexport.PNG" alt="" class="img-fluid">
+
+                                  <p>
+                                  
+                                  <br> An SQL file will be downloaded. Now open MySQL Workbench. We need to Import the SQL file into your JawsDB MySQL database.   
+
+                                  <br> To do this, click on <b>'Database'</b> tab in the menu. Click on <b>'Connect to Database'</b>
+                                  
+                                </p>
+
+                                <br><img src="../upload/mysql workbench1.PNG" alt="" class="img-fluid">
+
+                                <p>
+                                  <br><br>Now enter all the details of your JawsDB instance which you have copied and pasted in your config.php file earlier. Fill in all the details and click on 'OK' (Don't forget to enter the password in 'Store in vault' option)
+                                </p>
+                                
+                                <br><img src="../upload/mysql3.PNG" alt="" class="img-fluid">
+
+
+                                <p>
+                                <br>Now once you are successfully connected to your database, click on <b>'import button'</b> in the menu. 
+
+                                 <br>Now open the SQL file you just downloaded from Phpmyadmin. This will copy all your queries to your new Database. 
+                                 </p>
+
+                                 <img src="../upload/mysql4.PNG" alt="" class="img-fluid">
+
+                                 <p>
+                                 
+                                   <br>You just need to run the queries now to migrate your database. Click on the Flash button to run all the queries.
+                                  
+                                  </p>
+                                
+                                  <img src="../upload/mysql5.PNG" alt="" class="img-fluid">
+
+                                  <p>
+                                   <br>Once you are done, verify the rows are copied into your new database. This can be easily done. Right click on your table and click on <b>'Select Rows - LIMIT 1000'</b>. 
+
+                                   </p>
+
+                                   <img src="../upload/mysql7.PNG" alt="" class="img-fluid">
+
+                                   <p>
+                                   If you can see all the data from your local database, Congratulations! You made it! 🎉🥳
+                                   <br>
+                                   Now go to your Heroku Dashboard and click on <b>'Overview'</b> tab. In top right, there is a <b>'Open App'</b> button. Click on it to check our your application up and running!
+                                  </p>
+                            </div>
+
+                             <p>
+                             
+                            <br><br> <b> Bottomline: </b><br> If you have actually spent more than 15 minutes. don't worry. The next time you deploy your application, you will hardly take 10 minutes. 
+                            </br> <a href="mailto:teamintrospectors@gmail.com">Mail us</a> if you have any queries in deploying your application to Heroku. We'll do our best to help you out.
+                            
+                            <br><br>Keep following the blog for more amazing articles! 🌟
+                              
+                             </p>
+                            
+                       </div> 
+                         
+                    </div><!-- end content -->
+
+                            <div class="blog-title-area">
+                                <div class="tag-cloud-single">
+                                    <span>Tags</span>
+                                    <small><a href="../#" title="">Heroku</a></small>
+                                    <small><a href="../#" title="">PHP</a></small>
+                                    <small><a href="../#" title="">Web Development</a></small>
+                                    <small><a href="../#" title="">Deploying web application</a></small>
+                                </div><!-- end meta -->
+
+                                <div class="post-sharing">
+                                    <ul class="list-inline">
+                                        <li><a href="../#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
+                                        <li><a href="../#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
+                                        <li><a href="../#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div><!-- end post-sharing -->
+                            </div><!-- end title -->
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="banner-spot clearfix">
+                                        <div class="banner-img">
+                                            <img src="../upload/banner_01.jpg" alt="" class="img-fluid">
+                                        </div><!-- end banner-img -->
+                                    </div><!-- end banner -->
+                                </div><!-- end col -->
+                            </div><!-- end row -->
+
+                            <hr class="invis1">
+
+                            <div class="custombox prevnextpost clearfix">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="blog-list-widget">
+                                            <div class="list-group">
+                                                <a href="../tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                                    <div class="w-100 justify-content-between text-right">
+                                                        <img src="../upload/tech_menu_19.jpg" alt="" class="img-fluid float-right">
+                                                        <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
+                                                        <small>Prev Post</small>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+
+                                    <div class="col-lg-6">
+                                        <div class="blog-list-widget">
+                                            <div class="list-group">
+                                                <a href="../tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                                    <div class="w-100 justify-content-between">
+                                                        <img src="../upload/tech_menu_20.jpg" alt="" class="img-fluid float-left">
+                                                        <h5 class="mb-1">Let's make an introduction to the glorious world of history</h5>
+                                                        <small>Next Post</small>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end author-box -->
+
+                            <hr class="invis1">
+
+                            <div class="custombox authorbox clearfix">
+                                <h4 class="small-title">About author</h4>
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                        <img src="../upload/author.png" alt="" class="img-fluid rounded-circle"> 
+                                    </div><!-- end col -->
+
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                        <h4><a href="#">Sai Kamal</a></h4>
+                                        <p>Hi, I'm Sai kamal, a Full Stack Developer 🚀 from Hyderabad, India. Currently a sophomore student contributing to various open-sourced projects and working on quite a few personal projects. Also part of multiple start-up companies aiming high 🌟
+
+                                            I'm interested in Web Development, Mobile App Development, Machine learning and Data Science.
+                                            
+                                            Beside programming, I got a penchant for writing!
+                                            
+                                            Check out my <a href="https://dantusaikamal.github.io/">Portfolio</a> 
+                                        </p>
+
+                                        <div class="topsocial">
+                                            <a href="https://www.linkedin.com/in/dantu-sai-kamal/" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                                            <a href="https://dantusaikamal.medium.com/" data-toggle="tooltip" data-placement="bottom" title="Medium"><i class="fa fa-medium"></i></a>
+                                            <a href="https://www.instagram.com/sai_kamal7/" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                            <a href="https://github.com/Dantusaikamal/" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github-square"></i></a>
+                                            <a href="https://twitter.com/saikamaldantu/" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                        </div><!-- end social -->
+
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end author-box -->
+
+                            <hr class="invis1">
+
+                            <div class="custombox clearfix">
+                                <h4 class="small-title">You may also like</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="blog-box">
+                                            <div class="post-media">
+                                                <a href="tech-single.html" title="">
+                                                    <img src="../upload/tech_menu_04.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect">
+                                                        <span class=""></span>
+                                                    </div><!-- end hover -->
+                                                </a>
+                                            </div><!-- end media -->
+                                            <div class="blog-meta">
+                                                <h4><a href="../tech-single.html" title="">We are guests of ABC Design Studio</a></h4>
+                                                <small><a href="../blog-category-01.html" title="">Trends</a></small>
+                                                <small><a href="../blog-category-01.html" title="">21 July, 2017</a></small>
+                                            </div><!-- end meta -->
+                                        </div><!-- end blog-box -->
+                                    </div><!-- end col -->
+
+                                    <div class="col-lg-6">
+                                        <div class="blog-box">
+                                            <div class="post-media">
+                                                <a href="../tech-single.html" title="">
+                                                    <img src="../upload/tech_menu_06.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect">
+                                                        <span class=""></span>
+                                                    </div><!-- end hover -->
+                                                </a>
+                                            </div><!-- end media -->
+                                            <div class="blog-meta">
+                                                <h4><a href="../tech-single.html" title="">Nostalgia at work with family</a></h4>
+                                                <small><a href="../blog-category-01.html" title="">News</a></small>
+                                                <small><a href="../blog-category-01.html" title="">20 July, 2017</a></small>
+                                            </div><!-- end meta -->
+                                        </div><!-- end blog-box -->
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end custom-box -->
+
+                            <hr class="invis1">
+                                                    </div><!-- end banner -->
+                            </div><!-- end widget -->
+                        </div><!-- end sidebar -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="widget">
+                            <div class="footer-text text-left">
+                                <a href="../index.html"><img src="../images/version/logowhite.png" alt="" class="img-fluid"></a>
+                                <p>Tech Blog is a technology blog created by Team Introspectors. We share the last news on Technology and gadget articles. Head over to our Project ideas page to get inspired by our projects</p>
+                                <div class="social">
+
+                                    <a href="../#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="../#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="../#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                                </div>
+
+                                <hr class="invis">
+
+                                <div class="newsletter-widget text-left">
+                                    <form class="form-inline">
+                                        <input type="text" class="form-control" placeholder="Enter your email address">
+                                        <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                    </form>
+                                </div><!-- end newsletter -->
+                            </div><!-- end footer-text -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <h2 class="widget-title">Popular Categories</h2>
+                            <div class="link-widget">
+                                <ul>
+                                    <li><a href="../category-gadgets.html">Gadgets <span>(21)</span></a></li>
+                                    <li><a href="../project-ideas.html">Project Ideas <span>(15)</span></a></li>
+                                    <li><a href="../category-technology.html">Technology <span>(31)</span></a></li>
+                                    <li><a href="../category-smartphones.html">Smartphones <span>(22)</span></a></li>
+        
+                                </ul>
+                                    </div><!-- end link-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <h2 class="widget-title">Copyrights</h2>
+                            <div class="link-widget">
+                                <ul>
+                                    <li><a href="../#">About us</a></li>
+                                    <li><a href="../#">Advertising</a></li>
+                                    <li><a href="../#">Write for us</a></li>
+                                    <li><a href="../#">Trademark</a></li>
+                                    <li><a href="../#">License & Help</a></li>
+                                </ul>
+                            </div><!-- end link-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <br>
+                        <div class="copyright">&copy; Tech Introspectors. <a href="https://www.youtube.com/channel/UCQV5B4b-PIXkzQq7XUSR_2A"> Check out our Youtube channel</a>.</div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <div class="dmtop">Scroll to Top</div>
+        
+    </div><!-- end wrapper -->
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/tether.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+
+</body>
+</html>
