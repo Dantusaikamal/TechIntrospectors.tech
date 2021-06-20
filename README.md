@@ -23,7 +23,7 @@
     <br />
     <a href="https://github.com/Dantusaikamal/Tech-blog">View Demo</a>
     ·
-    <a href="https://github.com/Dantusaikamal/Tech-blog/issues">Report Bug</a>
+    <a href="https://github.com/Dantusaikamal/Tech-blog/issues">Report a Bug</a>
     ·
     <a href="https://github.com/Dantusaikamal/Tech-blog/issues">Request Feature</a>
   </p>
