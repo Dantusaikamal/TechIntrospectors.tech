@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-https://techintrospectors.tech/tech-index.html is a Tech blog created by <a href="https://www.youtube.com/channel/UCQV5B4b-PIXkzQq7XUSR_2A">Team Introspectors.<a> The blog contains articles on the latest Tech related news, reviews on trending gadgets and applications, guides on project ideas and many more!
+https://teamintrospectors.tech/ is a Tech blog created by <a href="https://www.youtube.com/channel/UCQV5B4b-PIXkzQq7XUSR_2A">Team Introspectors.<a> The blog contains articles on the latest Tech related news, reviews on trending gadgets and applications, guides on project ideas and many more!
   
   More and more articles will be added soon. Stay tuned to our tech blog till then.
 <br><br>
